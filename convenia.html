@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-purple-100">
+    <div class="flex bg-white shadow-2xl rounded-2xl overflow-hidden w-3/4 max-w-4xl">
+        <!-- Formulário de login -->
+        <div class="w-1/2 p-10 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-center text-gray-700 mb-6">Entrar</h2>
+            <form>
+                <input type="email" placeholder="E-MAIL" class="w-full p-4 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                <input type="password" placeholder="SENHA" class="w-full p-4 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                <a href="#" class="text-sm text-gray-500 hover:underline block text-center mb-4">Esqueceu sua senha?</a>
+                <button class="w-full py-3 bg-gradient-to-r from-purple-400 to-purple-600 text-white rounded-lg font-bold shadow-lg hover:opacity-90 transition">ENTRAR</button>
+                <button class="w-full mt-4 py-3 border flex items-center justify-center gap-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24"><path fill="#4285F4" d="M46.06 24.5c0-1.68-.15-3.3-.42-4.83H24v9.17h12.5c-.57 2.88-2.2 5.3-4.68 6.96v5.74h7.56c4.44-4.1 7-10.15 7-16.9z"/><path fill="#34A853" d="M24 48c6.3 0 11.56-2.1 15.4-5.66l-7.56-5.74c-2.1 1.38-4.74 2.2-7.84 2.2-6.02 0-11.1-4.08-12.92-9.58H3.12v6.02C7.05 42.24 14.75 48 24 48z"/><path fill="#FBBC05" d="M11.08 28.34c-.5-1.38-.78-2.85-.78-4.34s.28-2.96.78-4.34V13.6H3.12A24 24 0 000 24c0 3.8.88 7.36 2.46 10.4l8.62-6.06z"/><path fill="#EA4335" d="M24 9.5c3.44 0 6.5 1.18 8.94 3.44l6.66-6.66C35.56 2.1 30.3 0 24 0 14.75 0 7.05 5.76 3.12 13.6l8.62 6.06c1.82-5.5 6.9-9.58 12.92-9.58z"/></svg>
+                    CONTINUAR COM GOOGLE
+                </button>
+            </form>
+        </div>
+        
+        <!-- Mensagem lateral -->
+        <div class="w-1/2 bg-gradient-to-r from-purple-400 to-purple-600 flex flex-col justify-center items-center text-white p-10">
+            <h2 class="text-3xl font-bold">Olá, amigo(a)</h2>
+            <p class="text-center mt-4">Informe seu e-mail e senha para entrar na plataforma.</p>
+        </div>
+    </div>
+</body>
+</html>
